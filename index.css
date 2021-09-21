@@ -1,0 +1,122 @@
+/* Overall css styles */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+.clr{
+    clear: both;
+}
+/* to align all items in center */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background:linear-gradient(rgb(255, 157, 0),rgb(228, 122, 80),red);
+}
+/* Calculator div with display grid and width */
+.calculator{
+    width: 269px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* Calculator number edited
+with height width size*/
+.calculator span{
+    width: 90px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color:rgb(235, 230, 230);
+    font-size: 1.2rem;
+    color: black;
+    font-weight:500;
+}
+/* onhover shadow for numbers and pointers*/
+.calculator span:hover{
+   cursor: pointer;
+   border:0.2px solid black;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* Calculator operators +,-,* etc */
+.calculator .opreations{
+    background-color:black;
+    color: white;
+}
+/* Calculator on hover numbers having box-shadow */
+.calculator .opreations:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color:black;
+    color: white;
+    border:2px solid white;
+}
+/* Calculator clear button  */
+.calculator .clear{
+    background-color:rgb(236, 65, 65);
+    color: white;
+}
+/* Calculator input area where number is to be written */
+.calculator .inputArea{
+    grid-column: span 4;
+    padding: 20px 10px;
+    outline: none;
+    border:none;
+    font-size:1.4rem;
+}
+
+/* Calculator equal sign */
+.calculator .equal{
+    width: 180px;
+    grid-column: span 2;
+    background-color:rgb(33, 36, 221);
+    font-size:1.8rem;
+}
+/* Calculator History Heading and box  */
+#history{
+    width: 331px;
+    height: 366px;
+    overflow: scroll;
+    font-size: 1.1em;
+    background:linear-gradient(rgba(255, 255, 255, 0.897),rgba(255, 255, 255, 0.383));
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-left: 120px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-family: 'Pacifico', cursive;
+}
+#history::-webkit-scrollbar{
+    width:0;
+}
+/* History for padding */
+#history h3{
+    padding: 10px 0px;
+    font-size:1.3em;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+}
+#history button{
+    margin-bottom: 0px;
+    position:fixed;
+    bottom: 180px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    width:90px;
+    background: linear-gradient(rgb(131, 231, 131),rgb(9, 224, 9));
+    color: black;
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* History last child in white */
+#history p:last-child{
+    font-size:1.3rem;
+    font-weight:500;
+    color:rgb(10, 5, 5);
+    text-align:center;
+}
